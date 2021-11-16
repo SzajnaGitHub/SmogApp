@@ -1,0 +1,58 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'androidx.navigation.safeargs'
+}
+
+apply from: configFile('base-config.gradle')
+
+android {
+    defaultConfig {
+        applicationId "com.espressoit.smoginfo"
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunnerArguments clearPackageData: 'true'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    buildFeatures {
+        //noinspection DataBindingWithoutKapt
+        dataBinding = true
+    }
+}
+
+dependencies {
+
+    // Project
+    implementation project(':airquality')
+    implementation project(':common')
+    implementation project(':measurementstationlist')
+    implementation project(':navigation')
+    implementation project(':network')
+    implementation project(':stationdetails')
+
+    // Androidx
+    implementation deps.androidx.appcompat
+    implementation deps.androidx.constraint
+    implementation deps.androidx.core
+    implementation deps.androidx.lifecycleRuntime
+    implementation deps.androidx.splashscreen
+    implementation deps.material
+
+    // Navigation component
+    implementation deps.navigation.fragment
+    implementation deps.navigation.ui
+
+    // Network
+    implementation deps.network.retrofit
+    implementation deps.network.okhttp
+    implementation deps.network.okhttpInterceptor
+}

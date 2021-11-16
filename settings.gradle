@@ -1,0 +1,10 @@
+rootProject.name = "SmogInfo"
+include(
+    ':app',
+    ':airquality',
+    ':common',
+    ':measurementstationlist',
+    ':navigation',
+    ':network',
+    ':stationdetails'
+)

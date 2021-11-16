@@ -1,0 +1,6 @@
+ext.buildConfig = [
+    'minSdk'    : 21,
+    'compileSdk': 31,
+    'targetSdk' : 31,
+    'buildTools': '30.0.2'
+]

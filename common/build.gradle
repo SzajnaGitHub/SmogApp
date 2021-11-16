@@ -1,0 +1,10 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+apply from: configFile('base-config.gradle')
+
+dependencies {
+
+    implementation deps.androidx.lifecycleRuntime
+    implementation deps.androidx.lifecycleViewModel
+}

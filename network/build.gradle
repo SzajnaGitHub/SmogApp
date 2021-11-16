@@ -1,0 +1,12 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+apply from: configFile('base-config.gradle')
+
+dependencies {
+
+    implementation deps.network.retrofit
+    implementation deps.network.retrofitMoshiConverter
+    implementation deps.network.okhttpInterceptor
+    implementation deps.network.okhttp
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/stationListFragment">
+
+    <fragment
+        android:id="@+id/stationListFragment"
+        android:name="com.espressoit.measurementstationlist.StationListFragment"
+        android:label="StationListFragment">
+        <action
+            android:id="@+id/action_stationListFragment_to_stationDetailsFragment"
+            app:destination="@id/stationDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/stationDetailsFragment"
+        android:name="com.espressoit.stationdetails.StationDetailsFragment"
+        android:label="StationDetailsFragment">
+        <argument
+            android:name="stationId"
+            app:argType="integer" />
+    </fragment>
+
+</navigation>
