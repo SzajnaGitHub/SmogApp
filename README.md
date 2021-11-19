@@ -7,6 +7,7 @@ Tech stack:
 - Coroutines
 - Room
 - Flows
+- Hilt
 - Retrofit
 - Navigation compontent
 - MVVM
