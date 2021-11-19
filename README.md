@@ -21,3 +21,4 @@ Things to improve:
 - UI/animations
 - navigation
 - unit tests
+- add more data to details view
